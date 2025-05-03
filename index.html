@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon Header Clone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #fefcea, #f1da36);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      background-color: #131921;
+      gap: 30px;
+      height: 70px;
+      width: 100%;
+    }
+
+    .first img {
+      margin-left: 10px;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 130px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    .first img:hover {
+      border: 2px solid white;
+    }
+
+    .address {
+      padding: 5px;
+      margin-top: 5px;
+      color: white;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    .Head strong {
+      font-size: 16px;
+    }
+    .address:hover {
+      border: 2px solid white;
+    }
+
+    .search-bar {
+      display: flex;
+      flex: 1;
+    }
+
+    .search-bar select {
+      padding: 12px;
+      background-color: #e6e6e6;
+      border: none;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .search-bar input {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      font-size: 14px;
+    }
+
+    .search-bar button {
+      padding: 0 15px;
+      background-color: #febd69;
+      border: none;
+      cursor: pointer;
+    }
+
+    .search-bar button i {
+      color: #333;
+      font-size: 18px;
+    }
+
+    .language img {
+      padding-top: 20px;
+      padding-right: 5px;
+      width: 20px;
+      height: 15px;
+    }
+
+    .language {
+      color: white;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      cursor: pointer;
+    }
+
+    .language:hover {
+      border: 2px solid white;
+    }
+
+    span {
+      font-size: 10px;
+      color: darkgray;
+    }
+
+    .account {
+      padding: 5px;
+      margin-top: 5px;
+      color: white;
+      font-size: 14px;
+      line-height: 1.2;
+      cursor: pointer;
+    }
+
+    .account:hover {
+      border: 2px solid white;
+    }
+
+    .return {
+      padding: 5px;
+      color: white;
+      line-height: 1.2;
+      margin-top: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .return:hover {
+      border: 2px solid white;
+    }
+
+    .cart img {
+      margin-top: 5px;
+      width: 50px;
+      height: 40px;
+    }
+
+    .cart {
+      margin-right: 10px;
+      padding: 5px;
+      padding-right: 5px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .cart:hover {
+      border: 2px solid white;
+    }
+
+    .second-navbar {
+      background-color: #2b2b3b;
+      display: flex;
+      color: white;
+      gap: 5px;
+    }
+
+    .menu {
+      margin-left: 5px;
+      padding: 7px;
+      font-size: 13px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .menu:hover {
+      border: 2px solid white;
+    }
+
+    .main-body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .First-row-first {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      width: 330px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      height:500px;
+    }
+
+    .First-row-first img {
+      width: 130px;
+      margin: 10px;
+      height: 130px;
+      cursor: pointer;
+    }
+
+    .First-row-first figure {
+      width: 45%;
+      margin: 0;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    .column-two {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      width: 330px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      height: 500px;
+    }
+
+    .column-two img {
+      background-color: lavenderblush;
+      padding: 20px;
+      width: 100px;
+      margin: 10px;
+      height: 110px;
+      cursor:pointer;
+    }
+
+    .column-two figure {
+      width: 45%;
+      margin: 0;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .signin1{
+      background-color: white;
+      width: 330px;
+      height: 150px;
+      padding: 5px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 8px;
+      line-height: 3;
+    }
+
+    .signin1 button {
+      background: #ffd814;
+      border: none;
+      padding: 10px 20px;
+      margin-left: 30%;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      width: 200px;
+      margin-left: 70px;
+    }
+
+    .signin img {
+      margin-top: 20px;
+      padding-left: 20px;
+      padding: auto;
+      width: 320px;
+      height: 320px;
+      cursor: pointer;
+    }
+
+    .banner-content img {
+      width: 100%;
+      cursor: pointer;
+    }
+    footer{
+      background-color: #232f3f;
+      width: 100%;
+  }
+  .lasthead{
+   background-color: White;
+   padding-top: 50px;
+   padding-bottom: 40px;
+  }
+  .lasthead button{
+    background: #ffd814;
+    border: none;
+    width: 15%;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 15px;
+  }
+  .footer1{
+      background-color: #364759;
+      padding-top: 15px;
+      padding-bottom: 15px;
+  }
+  .footer1:hover{
+      background-color: #48576a;
+  }
+  footer a{
+      text-decoration: none;
+      color: white;
+  }
+  .footer2{
+      display: flex;
+      padding-left: 15%;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      line-height: 0.8;
+      border-bottom: 1px solid white;
+  }
+  .footer2 div{
+      padding-right: 11%;
+      color: white;
+      font-weight: bold;
+      font-size: large;
+  }
+  .footer2 a{
+      color: #bcc0c1;
+      font-size: 15px;
+      font-weight: 100;
+  }
+  .footer2 a:hover{
+      text-decoration: underline;
+  }
+  .last{
+      background-color: black;
+      padding-top: 30px;
+      padding-bottom: 50px;
+  }
+  .last a:hover{
+      text-decoration: underline;
+  }
+  .last1{
+      padding-left: 15%;
+      display: flex;
+      line-height: 0.8;
+  }
+  .last1 a{
+      font-size: 13px;
+      color: #898a8f;
+  }
+  .last1 div{
+      padding-right: 6%;
+  }
+  .last3{
+      color: #fefeff; 
+      margin-top: 50px;
+      font-size: smaller;
+  }
+  .last3 a{
+      color: #fefeff;
+  }
+  .span{
+      color:#fefeff;
+  }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="first">
+        <img src="Amazon-Logo.png" alt="Amazon Logo">
+      </div>
+      <div class="address">
+        Delivering to Shillong 793003<br>
+        <strong>Update location</strong>
+      </div>
+      <div class="search-bar">
+        <select>
+          <option>All</option>
+        </select>
+        <input type="text" placeholder="Search Amazon.in">
+        <button>🔍</button>
+      </div>
+      <div class="language">
+        <img src="Indian-flag.png">EN
+        <span>&#9660;</span>
+      </div>
+      <div class="account">
+        Hello, sign in<br>
+        <strong>Account & Lists <span>&#9660;</span></strong>
+      </div>
+      <div class="return">
+        Return<br>
+        <strong>& Orders</strong>
+      </div>
+      <div class="cart">
+        <img src="Amazon cart.png"><strong>Cart</strong>
+      </div>
+    </div>
+    <div class="second-navbar">
+      <div class="menu">☰All</div>
+      <div class="menu">MX Player</div>
+      <div class="menu">Sell</div>
+      <div class="menu">Bestsellers</div>
+      <div class="menu">Today's Deals</div>
+      <div class="menu">Mobiles</div>
+      <div class="menu">Prime<span>&#9660;</span></div>
+      <div class="menu">Fashion</div>
+      <div class="menu">Customer Services</div>
+      <div class="menu">New Releases</div>
+      <div class="menu">Electronics</div>
+      <div class="menu">Amazon Pay</div>
+      <div class="menu">Home & Kitchen</div>
+      <div class="menu">Computers</div>
+      <div class="menu">Books</div>
+      <div class="menu">Car & Motorbike</div>
+      <div class="menu">Toys & Games</div>
+    </div>
+  </nav>
+
+  <div class="banner-content">
+    <img src="1111.png" alt="Banner">
+  </div>
+
+  <main>
+    <div class="main-body">
+      <div class="First-row-first">
+        <h2>Pick up where you left off</h2>
+        <figure>
+          <img src="1.jpeg"><figcaption>Sony PlayStation®5 Dig…</figcaption>
+        </figure>
+        <figure>
+          <img src="2.jpeg"><figcaption>Sony PlayStation5 Gam…</figcaption>
+        </figure>  
+        <figure>
+          <img src="3.jpeg"><figcaption>Sony PS5 Gaming Cons…</figcaption>
+        </figure>  
+        <figure>
+          <img src="4.jpeg"><figcaption>Sony Dualsense Usb Ty…</figcaption>
+        </figure>
+        <a href="">See more</a>    
+      </div>
+
+      <div class="column-two">
+        <h2>Smartphones curated for you</h2>
+        <figure>
+          <img src="5.jpg"><figcaption>Budget | Under<br>₹10,000</figcaption>
+        </figure>
+        <figure>
+          <img src="6.jpg"><figcaption>Mid-range | ₹10,000 - ₹25,000</figcaption>
+        </figure>
+        <figure>
+          <img src="7.jpg"><figcaption>Premium | ₹25,000 - ₹40,000</figcaption>
+        </figure>
+        <figure>
+          <img src="8.jpg"><figcaption>Premium | ₹25,000 - ₹40,000</figcaption>
+        </figure>
+        <a href="">See all offers</a>
+      </div>
+
+      <div class="column-two">
+        <h2>Deals on accessories from your top smartphone brands</h2>
+        <figure>
+          <img src="9.png"><figcaption>Apple | Up to 20%</figcaption>
+        </figure>
+        <figure>
+          <img src="10.png"><figcaption>Samsung | Up to 60% off</figcaption>
+        </figure>
+        <figure>
+          <img src="11.png"><figcaption>Oneplus | Starting ₹599</figcaption>
+        </figure>
+        <figure>
+          <img src="12.png"><figcaption>Xiaomi | Up to 70% off</figcaption>
+        </figure>
+        <a href="">See all offers</a>
+      </div>
+
+      <div class="signin">
+        <div class="signin1">
+          <h2>Sign in for your best experience</h2>
+        <button>Sign in securely</button>
+        </div>
+        <img src="13.png" alt="Sign in banner">
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="lasthead">
+      <hr color="#898a8f">
+      <center><br><br>
+        <h1>See personalized recommendations</h1>
+        <button>Sign in</button><br>
+        <span style="font-size: 13px; color: black;">New customer? </span><a href="" style="text-decoration: underline; font-size: 13px; color: blue;">Start here</a><br><br>
+      </center>
+      <hr color="#898a8f">
+    </div>
+    <center><a href="#top"><div class="footer1">Back to Top</div></a></center>
+    <div class="footer2">
+        <div>
+            <p>Get to Know<br>Us</p>
+            <a href="#">About Amazon</a><br><br>
+            <a href="#">Careers</a><br><br>
+            <a href="#">Press Releases</a><br><br>
+            <a href="#">Amazon Science</a>
+        </div>
+        <div>
+            <p>Connect with<br>Us</p>
+            <a href="">Facebook</a><br><br>
+            <a href="">Twitter</a><br><br>
+            <a href="">Instagram</a>
+        </div>
+        <div>
+            <p>Make Money with Us</p>  
+            <a href="">Sell on Amazon</a><br><br>
+            <a href="">Sell under Amazon<br>Accelerator</a><br><br> 
+            <a href="">Protect and Build Your Brand</a><br><br>
+            <a href="">Amazon Global Selling</a><br><br>
+            <a href="">Supply to Amazon</a><br><br>
+            <a href="">Become an Affiliate</a><br><br>
+            <a href="">Fulfilment by Amazon</a><br><br>
+            <a href="">Advertise Your Products</a><br><br>
+            <a href="">Amazon Pay on Merchants</a>
+        </div>
+        <div>
+            <p>Let Us Help You</p>
+            <a href="">Your Account</a><br><br>
+            <a href="">Returns Centre</a><br><br>
+            <a href="">Recalls and Product Safety<br>Alerts</a><br><br>
+            <a href="">100% Purchase Protection</a><br><br>
+            <a href="">Amazon App Download</a><br><br>
+            <a href="">Help</a>
+        </div>
+    </div>
+    <div style="padding-top: 20px; padding-bottom: 40px;">
+        <center>
+            <button style="background-color:transparent; padding: 10px; padding-right: 30px; border: 1px solid white; border-radius: 2px;"><a href="" style="color: white;">🌐   English </a></button>&nbsp;
+            <button style="background-color:transparent; padding: 10px; padding-right: 30px; border: 1px solid white; border-radius: 2px;"><a href="" style="color: white;"><img src="Indian-flag.png" width="15px">  India</a></button>
+        </center>
+    </div>
+    <div class="last">
+        <div class="last1">
+            <div>
+                <a href=""><span class="span">AbeBooks</span><br>Books,<br>art& collectibles</a><br><br>
+                <a href=""><span class="span">Shopbop</span><br>Designer<br>Fashion Brands</a>
+            </div>
+            <div>
+                <a href=""><span class="span">Amazon Web Services</span><br>Scalable Cloud<br>Computing Services</a><br><br>
+                <a href=""><span class="span">Amazon Business</span><br>Everything For<br>Your Business</a>
+            </div>
+            <div>
+                <a href=""><span class="span">Audible</span><br>Download<br>Audio Books</a><br><br>
+                <a href=""><span class="span">Prime Now</span><br>2-Hour Delivery<br>on Everyday Items</a>
+            </div>
+            <div>
+                <a href=""><span class="span">IMDb</span><br>Movies, TV <br>& Celebrities</a><br><br>
+                <a href=""><span class="span">Amazon Prime Music</span><br>
+                    100 million songs, ad-<br>free<br>
+                    Over 15 million podcast<br>episodes</a>
+            </div>
+        </div>
+        <div class="last3">
+            <center>
+                <a href="">Conditions of Use & Sale</a>&nbsp;&nbsp;&nbsp;
+                <a href="">Privacy Notice</a>&nbsp;&nbsp;&nbsp;
+                <a href="">Interest-Based Ads</a><br>
+                © 1996-2025, Amazon.com, Inc. or its affiliates
+            </center>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
